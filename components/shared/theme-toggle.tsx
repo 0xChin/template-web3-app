@@ -12,7 +12,7 @@ import { IsLightTheme } from './is-light-theme'
 
 export function ThemeToggle() {
   const { setTheme } = useTheme()
-  const [colorMode, toggleMode, setMode] = useColorMode()
+  const [colorMode, _, setMode] = useColorMode()
 
   const handleSetLightTheme = () => {
     setTheme('light')
@@ -38,10 +38,10 @@ export function ThemeToggle() {
       <DropdownMenuTrigger asChild>
         <Button size="sm" variant="ghost">
           <IsLightTheme>
-            <Icons.sun className="h-6 w-6 hover:text-slate-900" />
+            <Icons.sun className="h-6 w-6 hover:text-neutral-900" />
           </IsLightTheme>
           <IsDarkTheme>
-            <Icons.moon className="h-6 w-6 hover:text-slate-900 dark:text-white dark:hover:text-slate-100" />
+            <Icons.moon className="h-6 w-6 hover:text-neutral-900 dark:text-white dark:hover:text-neutral-100" />
           </IsDarkTheme>
           <span className="sr-only">Toggle theme</span>
         </Button>

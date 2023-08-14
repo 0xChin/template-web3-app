@@ -26,7 +26,7 @@ export const DiscoProfileBasic = ({ className, address, ...props }: DiscoProfile
     <div className={cn('grid grid-cols-1 items-center justify-between gap-2 lg:grid-cols-4', className)} {...props}>
       <div className="col-span-1">
         {isLoading ? (
-          <div className="h-60 w-60 max-w-full animate-pulse rounded-lg border-4 bg-gray-500/80 shadow-xl dark:bg-gray-200" />
+          <div className="h-60 w-60 max-w-full animate-pulse rounded-lg border-4 bg-neutral-500/80 shadow-xl dark:bg-neutral-200" />
         ) : (
           <Image
             alt="Profile Avatar"
@@ -40,7 +40,7 @@ export const DiscoProfileBasic = ({ className, address, ...props }: DiscoProfile
       </div>
       <div className="col-span-1 lg:col-span-3">
         {isLoading ? (
-          <div className="mx-auto h-60 w-[800px] max-w-full animate-pulse rounded-lg bg-gray-500/80 shadow-xl dark:bg-gray-200 lg:w-full" />
+          <div className="mx-auto h-60 w-[800px] max-w-full animate-pulse rounded-lg bg-neutral-500/80 shadow-xl dark:bg-neutral-200 lg:w-full" />
         ) : (
           <div className="max-w-full">
             {data?.profile?.name && (
@@ -62,12 +62,12 @@ export const DiscoProfileBasic = ({ className, address, ...props }: DiscoProfile
                         rel="noopener noreferrer"
                         target="_blank"
                         {...props}
-                        className="font-medium text-gray-800 underline transition-colors dark:text-blue-200"
+                        className="font-medium text-neutral-800 underline transition-colors dark:text-blue-200"
                       />
                     ),
 
                     code: ({ ...props }: HTMLAttributes<HTMLElement>) => (
-                      <code {...props} className="rounded-sm bg-gray-100 px-1 py-0.5 font-mono font-medium text-gray-800" />
+                      <code {...props} className="rounded-sm bg-neutral-100 px-1 py-0.5 font-mono font-medium text-neutral-800" />
                     ),
                   }}>
                   {data?.profile?.bio}

@@ -24,7 +24,7 @@ export default function Card({
   return (
     <motion.div
       variants={FADE_UP_ANIMATION_VARIANTS}
-      className={`relative col-span-1  overflow-hidden rounded-xl border border-gray-200 bg-white px-4 shadow-md dark:border-gray-800 dark:bg-neutral-800 dark:text-white ${
+      className={`relative col-span-1  overflow-hidden rounded-xl border border-neutral-200 bg-white px-4 shadow-md dark:border-neutral-700 dark:bg-neutral-800 dark:text-white ${
         large ? 'md:col-span-2' : ''
       }`}>
       <div className="flex h-60 items-center justify-center">{demo}</div>
@@ -32,7 +32,7 @@ export default function Card({
         <h2 className="mb-3 bg-gradient-to-br from-black to-stone-500 bg-clip-text text-xl font-bold text-transparent dark:from-stone-100 dark:to-emerald-200 md:text-3xl md:font-normal">
           <Balancer>{title}</Balancer>
         </h2>
-        <div className="content prose-sm -mt-2 leading-normal text-gray-500 md:prose dark:text-gray-100">
+        <div className="content prose-sm -mt-2 leading-normal text-neutral-500 md:prose dark:text-neutral-100">
           <Balancer>
             <ReactMarkdown
               components={{
@@ -41,11 +41,11 @@ export default function Card({
                     rel="noopener noreferrer"
                     target="_blank"
                     {...props}
-                    className="font-medium text-gray-800 underline transition-colors dark:text-blue-200"
+                    className="font-medium text-neutral-800 underline transition-colors dark:text-blue-200"
                   />
                 ),
 
-                code: ({ ...props }) => <code {...props} className="rounded-sm bg-gray-100 px-1 py-0.5 font-mono font-medium text-gray-800" />,
+                code: ({ ...props }) => <code {...props} className="rounded-sm bg-neutral-100 px-1 py-0.5 font-mono font-medium text-neutral-800" />,
               }}>
               {description}
             </ReactMarkdown>

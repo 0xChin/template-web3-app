@@ -28,7 +28,7 @@ export function LatestTransfers({ isMainnet }: LatestTransfersProps) {
     <div className="lg:max-w-xs xl:ml-auto 2xl:max-w-sm">
       <button
         className={`flex w-full items-center justify-center ${
-          collapse ? 'font-medium text-slate-300 hover:text-slate-800 dark:text-slate-700 dark:hover:text-slate-200' : 'font-semibold'
+          collapse ? 'font-medium text-neutral-300 hover:text-neutral-800 dark:text-neutral-700 dark:hover:text-neutral-200' : 'font-semibold'
         } mb-3 space-x-1`}
         onClick={() => setCollapse(!collapse)}>
         <span className="3xl:text-2xl text-sm capitalize text-black dark:text-white">Latest Transfers</span>
@@ -43,7 +43,7 @@ export function LatestTransfers({ isMainnet }: LatestTransfersProps) {
           <div className="3xl:gap-8 mx-auto grid max-w-xl gap-4 sm:grid-cols-1 lg:grid-cols-1">{transfersComponent()}</div>
           {address && transfers.length > 3 && (
             <LinkComponent
-              className="3xl:text-2xl mt-2.5 flex items-center justify-center text-blue-500 dark:text-slate-200"
+              className="3xl:text-2xl mt-2.5 flex items-center justify-center text-blue-500 dark:text-neutral-200"
               href={`https://connextscan.io//address/${address}`}
               target="_blank">
               <span className="font-medium">See more</span>

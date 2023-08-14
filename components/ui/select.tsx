@@ -16,7 +16,7 @@ const SelectTrigger = forwardRef<ElementRef<typeof SelectPrimitive.Trigger>, Com
     <SelectPrimitive.Trigger
       ref={ref}
       className={cn(
-        'flex h-10 w-full items-center justify-between rounded-md border border-slate-300 bg-transparent py-2 px-3 text-sm placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 dark:border-slate-700 dark:text-slate-50 dark:focus:ring-slate-400 dark:focus:ring-offset-slate-900',
+        'flex h-10 w-full items-center justify-between rounded-md border border-neutral-300 bg-transparent py-2 px-3 text-sm placeholder:text-neutral-400 focus:outline-none focus:ring-2 focus:ring-neutral-400 focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 dark:border-neutral-700 dark:text-neutral-50 dark:focus:ring-neutral-400 dark:focus:ring-offset-neutral-900',
         className
       )}
       {...props}>
@@ -33,7 +33,7 @@ const SelectContent = forwardRef<ElementRef<typeof SelectPrimitive.Content>, Com
       <SelectPrimitive.Content
         ref={ref}
         className={cn(
-          'relative z-50 min-w-[8rem] overflow-hidden rounded-md border border-slate-100 bg-white text-slate-700 shadow-md animate-in fade-in-80 dark:border-slate-800 dark:bg-slate-800 dark:text-slate-400',
+          'relative z-50 min-w-[8rem] overflow-hidden rounded-md border border-neutral-100 bg-white text-neutral-700 shadow-md animate-in fade-in-80 dark:border-neutral-800 dark:bg-neutral-800 dark:text-neutral-400',
           className
         )}
         {...props}>
@@ -48,7 +48,7 @@ const SelectLabel = forwardRef<ElementRef<typeof SelectPrimitive.Label>, Compone
   ({ className, ...props }, ref) => (
     <SelectPrimitive.Label
       ref={ref}
-      className={cn('py-1.5 pr-2 pl-8 text-sm font-semibold text-slate-900 dark:text-slate-300', className)}
+      className={cn('py-1.5 pr-2 pl-8 text-sm font-semibold text-neutral-900 dark:text-neutral-300', className)}
       {...props}
     />
   )
@@ -60,7 +60,7 @@ const SelectItem = forwardRef<ElementRef<typeof SelectPrimitive.Item>, Component
     <SelectPrimitive.Item
       ref={ref}
       className={cn(
-        'relative flex cursor-default select-none items-center rounded-sm py-1.5 pr-2 pl-8 text-sm font-medium outline-none focus:bg-slate-100 data-[disabled]:pointer-events-none data-[disabled]:opacity-50 dark:focus:bg-slate-700',
+        'relative flex cursor-default select-none items-center rounded-sm py-1.5 pr-2 pl-8 text-sm font-medium outline-none focus:bg-neutral-100 data-[disabled]:pointer-events-none data-[disabled]:opacity-50 dark:focus:bg-neutral-700',
         className
       )}
       {...props}>
@@ -78,7 +78,7 @@ SelectItem.displayName = SelectPrimitive.Item.displayName
 
 const SelectSeparator = forwardRef<ElementRef<typeof SelectPrimitive.Separator>, ComponentPropsWithoutRef<typeof SelectPrimitive.Separator>>(
   ({ className, ...props }, ref) => (
-    <SelectPrimitive.Separator ref={ref} className={cn('-mx-1 my-1 h-px bg-slate-100 dark:bg-slate-700', className)} {...props} />
+    <SelectPrimitive.Separator ref={ref} className={cn('-mx-1 my-1 h-px bg-neutral-100 dark:bg-neutral-700', className)} {...props} />
   )
 )
 SelectSeparator.displayName = SelectPrimitive.Separator.displayName

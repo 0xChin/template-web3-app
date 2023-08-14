@@ -14,13 +14,13 @@ interface ITableBody extends HTMLAttributes<HTMLElement> {
  * @param {Object} props
  */
 export const TableBody = ({ className, page, prepareRow, ...props }: ITableBody) => {
-  const styleCell = cn(className, 'border-b-2 border-gray-100 dark:border-neutral-700 px-4 py-3')
+  const styleCell = cn(className, 'border-b-2 border-neutral-100 dark:border-neutral-700 px-4 py-3')
   return (
     <tbody {...props} className="">
       {page.map((row, idx) => {
         prepareRow(row)
         const styleRow = cn('row py-3', {
-          'bg-gray-100 text-gray-500 dark:text-white': row.original.disabled,
+          'bg-neutral-100 text-neutral-500 dark:text-white': row.original.disabled,
           'bg-white dark:bg-neutral-800 dark:text-white': !row.original.disabled,
         })
         return (

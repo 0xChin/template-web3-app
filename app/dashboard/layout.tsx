@@ -19,7 +19,7 @@ export default function DashboardLayout({ children }: { children: ReactNode }) {
   return (
     <>
       <div className="flex h-screen flex-col lg:grid lg:grid-cols-12">
-        <div className="col-span-12 flex flex-col bg-slate-50 shadow-md dark:bg-slate-800 lg:col-span-2 lg:pb-8">
+        <div className="col-span-12 flex flex-col bg-neutral-50 shadow-md dark:bg-neutral-800 lg:col-span-2 lg:pb-8">
           <IsMobile>
             <div className="flex p-4">
               <LinkComponent className="flex flex-1 items-center " href="/">
@@ -61,7 +61,7 @@ export default function DashboardLayout({ children }: { children: ReactNode }) {
           </IsDesktop>
         </div>
         <div className="relative col-span-12 flex max-h-[100vh] flex-1 flex-col lg:col-span-10">
-          <DashboardHeader className="bg-slate-100 py-3 shadow-md dark:bg-slate-700" />
+          <DashboardHeader className="bg-neutral-100 py-3 shadow-md dark:bg-neutral-700" />
           <main className="w-full flex-1 overflow-auto">{children}</main>
         </div>
       </div>

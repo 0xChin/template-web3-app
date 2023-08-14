@@ -58,7 +58,7 @@ export default function Home() {
             </motion.p>
             <motion.div className="mx-auto mt-6 flex flex-wrap items-center justify-center gap-y-3 space-x-4" variants={FADE_DOWN_ANIMATION_VARIANTS}>
               <LinkComponent
-                className="flex max-w-fit items-center justify-center space-x-2 rounded-full border border-gray-300 bg-white px-5 py-2 text-sm text-gray-600 shadow-md transition-colors hover:border-gray-800"
+                className="flex max-w-fit items-center justify-center space-x-2 rounded-full border border-neutral-300 bg-white px-5 py-2 text-sm text-gray-600 shadow-md transition-colors hover:border-neutral-700"
                 href={siteConfig.links.github}>
                 <FaGithub />
                 <p>Star on GitHub</p>
@@ -72,7 +72,7 @@ export default function Home() {
             </motion.div>
             <CopyToClipboard text="pnpm create turbo-eth@latest" onCopy={() => setCopied(true)}>
               <motion.div
-                className="group mx-auto mt-8 flex max-w-fit cursor-pointer items-center justify-between gap-x-2 rounded-xl border border-gray-200 bg-white py-4 px-3 text-sm font-medium shadow-md transition-colors dark:border-gray-800 dark:bg-neutral-800 dark:text-white hover:dark:border-gray-600/70 hover:dark:bg-neutral-700/70 md:px-6 md:text-lg"
+                className="group mx-auto mt-8 flex max-w-fit cursor-pointer items-center justify-between gap-x-2 rounded-xl border border-neutral-200 bg-white py-4 px-3 text-sm font-medium shadow-md transition-colors dark:border-neutral-700 dark:bg-neutral-800 dark:text-white hover:dark:border-neutral-600/70 hover:dark:bg-neutral-700/70 md:px-6 md:text-lg"
                 variants={FADE_DOWN_ANIMATION_VARIANTS}>
                 <pre>pnpm create turbo-eth@latest</pre>
                 <span className="flex-center flex h-4 w-4 cursor-pointer rounded-md text-neutral-600 dark:text-neutral-100 md:h-7 md:w-7">

@@ -10,7 +10,7 @@ const TabsList = forwardRef<ElementRef<typeof TabsPrimivite.List>, ComponentProp
   ({ className, ...props }, ref) => (
     <TabsPrimivite.List
       ref={ref}
-      className={cn('inline-flex items-center justify-center rounded-md bg-slate-100 p-1 dark:bg-slate-800', className)}
+      className={cn('inline-flex items-center justify-center rounded-md bg-neutral-100 p-1 dark:bg-neutral-800', className)}
       {...props}
     />
   )
@@ -21,7 +21,7 @@ const TabsTrigger = forwardRef<ElementRef<typeof TabsPrimivite.Trigger>, Compone
   ({ className, ...props }, ref) => (
     <TabsPrimivite.Trigger
       className={cn(
-        'inline-flex min-w-[100px] items-center justify-center rounded-[0.185rem] px-3 py-1.5  text-sm font-medium text-slate-700 transition-all  disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-white data-[state=active]:text-slate-900 data-[state=active]:shadow-sm dark:text-slate-200 dark:data-[state=active]:bg-slate-900',
+        'inline-flex min-w-[100px] items-center justify-center rounded-[0.185rem] px-3 py-1.5  text-sm font-medium text-neutral-700 transition-all  disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-white data-[state=active]:text-neutral-900 data-[state=active]:shadow-sm dark:text-neutral-200 dark:data-[state=active]:bg-neutral-900',
         className
       )}
       {...props}
@@ -33,7 +33,7 @@ TabsTrigger.displayName = TabsPrimivite.Trigger.displayName
 
 const TabsContent = forwardRef<ElementRef<typeof TabsPrimivite.Content>, ComponentPropsWithoutRef<typeof TabsPrimivite.Content>>(
   ({ className, ...props }, ref) => (
-    <TabsPrimivite.Content className={cn('mt-2 rounded-md border border-slate-200 p-6 dark:border-slate-700', className)} {...props} ref={ref} />
+    <TabsPrimivite.Content className={cn('mt-2 rounded-md border border-neutral-200 p-6 dark:border-neutral-700', className)} {...props} ref={ref} />
   )
 )
 TabsContent.displayName = TabsPrimivite.Content.displayName

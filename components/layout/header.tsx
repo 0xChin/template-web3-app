@@ -25,7 +25,7 @@ export function Header({ className, ...props }: HTMLAttributes<HTMLElement>) {
     'fixed top-0 w-full',
     'px-6 lg:px-10 py-3 mb-8 flex items-center',
     {
-      'border-b border-gray-200 bg-white/50 backdrop-blur-xl dark:bg-black/50 dark:border-gray-800': scrolled,
+      'border-b border-neutral-200 bg-white/50 backdrop-blur-xl dark:bg-black/50 dark:border-neutral-700': scrolled,
     },
     'z-30 transition-all'
   )

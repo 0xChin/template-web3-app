@@ -222,7 +222,7 @@ export function FormConnextXTransfer({ isMainnet, setIsMainnet }: FormConnextXTr
         <button
           disabled
           className="3xl:text-xl mt-3 flex w-full items-center justify-start rounded bg-red-400 p-4 text-sm font-medium text-white dark:bg-red-500">
-          Insufficient balance :(
+          Insufficient balance :
         </button>
       )
     }
@@ -231,7 +231,7 @@ export function FormConnextXTransfer({ isMainnet, setIsMainnet }: FormConnextXTr
       isInOriginChain()
     ) {
       return (
-        <button disabled className="mt-5 w-full cursor-not-allowed rounded bg-slate-100 p-4 text-gray-400 dark:bg-slate-800 dark:text-white">
+        <button disabled className="mt-5 w-full cursor-not-allowed rounded bg-neutral-100 p-4 text-gray-400 dark:bg-neutral-800 dark:text-white">
           {getButtonContent()}
         </button>
       )
@@ -294,7 +294,7 @@ export function FormConnextXTransfer({ isMainnet, setIsMainnet }: FormConnextXTr
   }, [approveTxSuccess])
 
   return showTransferStatus ? (
-    <div className="space-y-4 rounded border bg-slate-50 px-4 pt-5 pb-6 dark:border-slate-700 dark:bg-slate-900 sm:px-6 sm:pt-5 sm:pb-6">
+    <div className="space-y-4 rounded border bg-neutral-50 px-4 pt-5 pb-6 dark:border-neutral-700 dark:bg-neutral-900 sm:px-6 sm:pt-5 sm:pb-6">
       <div className="flex items-center justify-between space-x-2">
         <span className="text-lg font-semibold">Transfer status</span>
         <button onClick={() => setShowTransferStatus(false)}>
@@ -302,14 +302,14 @@ export function FormConnextXTransfer({ isMainnet, setIsMainnet }: FormConnextXTr
         </button>
       </div>
       <Image alt="Penguin" className="w-full" height={400} src="/penguin-working.gif" width={400} />
-      <p className="mt-3 text-xs font-medium text-slate-500 dark:text-slate-500 sm:text-sm">
+      <p className="mt-3 text-xs font-medium text-neutral-500 dark:text-neutral-500 sm:text-sm">
         Your transfer is on his way. You can close this window and the transaction will still be processed
       </p>
     </div>
   ) : (
     <motion.div
       animate="show"
-      className="card my-8 mx-4 max-w-fit dark:bg-gray-800 sm:mx-auto"
+      className="card my-8 mx-4 max-w-fit dark:bg-neutral-800 sm:mx-auto"
       initial="hidden"
       style={{ boxShadow: `${`${getChain(originChain)?.color ?? 'ffffff'}33`} 0px 16px 128px 64px` }}
       variants={FADE_DOWN_ANIMATION_VARIANTS}>
@@ -325,12 +325,12 @@ export function FormConnextXTransfer({ isMainnet, setIsMainnet }: FormConnextXTr
 
       <div className="mb-10 flex items-center justify-between">
         <div className="flex w-40 flex-col">
-          <span className="text-sm text-gray-600 dark:text-slate-200">From</span>
+          <span className="text-sm text-neutral-600 dark:text-neutral-200">From</span>
           <Select value={originChain} onValueChange={updateOriginChain}>
-            <SelectTrigger className="input mt-2 bg-white text-gray-600 placeholder:text-neutral-400 dark:bg-gray-700 dark:text-slate-200 dark:placeholder:text-neutral-400">
+            <SelectTrigger className="input mt-2 bg-white text-neutral-600 placeholder:text-neutral-400 dark:bg-neutral-700 dark:text-neutral-200 dark:placeholder:text-neutral-400">
               <SelectValue placeholder="Select chain" />
             </SelectTrigger>
-            <SelectContent className="bg-white dark:bg-gray-700">
+            <SelectContent className="bg-white dark:bg-neutral-700">
               {isMainnet
                 ? mainnetChains.map((chain, index) => (
                     <SelectItem key={index} value={chain.domain_id}>
@@ -355,12 +355,12 @@ export function FormConnextXTransfer({ isMainnet, setIsMainnet }: FormConnextXTr
           <MdOutlineSwapHoriz />
         </button>
         <div className="flex w-40 flex-col">
-          <span className="text-sm text-gray-600 dark:text-slate-200">To</span>
+          <span className="text-sm text-neutral-600 dark:text-neutral-200">To</span>
           <Select value={destinationChain} onValueChange={updateDestinationChain}>
-            <SelectTrigger className="input mt-2 bg-white text-gray-600 placeholder:text-neutral-400 dark:bg-gray-700 dark:text-slate-200 dark:placeholder:text-neutral-400">
+            <SelectTrigger className="input mt-2 bg-white text-neutral-600 placeholder:text-neutral-400 dark:bg-neutral-700 dark:text-neutral-200 dark:placeholder:text-neutral-400">
               <SelectValue placeholder="Select chain" />
             </SelectTrigger>
-            <SelectContent className="bg-white dark:bg-gray-700">
+            <SelectContent className="bg-white dark:bg-neutral-700">
               {isMainnet
                 ? mainnetChains.map((chain, index) => (
                     <SelectItem key={index} value={chain.domain_id}>
@@ -384,21 +384,21 @@ export function FormConnextXTransfer({ isMainnet, setIsMainnet }: FormConnextXTr
       </div>
 
       <div className="flex items-center justify-between">
-        <span className="text-sm text-gray-600 dark:text-slate-200">You send</span>
-        <span className="text-sm text-gray-600 dark:text-slate-200">
+        <span className="text-sm text-gray-600 dark:text-neutral-200">You send</span>
+        <span className="text-sm text-gray-600 dark:text-neutral-200">
           Balance:{' '}
           <span className="font-bold">
             {formatNumber(originBalance?.formatted ?? '')} {getAsset()?.symbol}
           </span>{' '}
         </span>
       </div>
-      <div className="mt-2 flex items-center justify-between rounded border border-slate-200 dark:border-gray-700">
+      <div className="mt-2 flex items-center justify-between rounded border border-neutral-200 dark:border-neutral-700">
         <div className="flex w-48 flex-col border-none">
           <Select value={asset} onValueChange={setAsset}>
-            <SelectTrigger className="input border-none text-gray-600 placeholder:text-neutral-400 dark:bg-gray-800 dark:text-slate-200 dark:placeholder:text-neutral-400">
+            <SelectTrigger className="input border-none text-neutral-600 placeholder:text-neutral-400 dark:bg-neutral-700 dark:text-neutral-200 dark:placeholder:text-neutral-400">
               <SelectValue placeholder="Select chain" />
             </SelectTrigger>
-            <SelectContent className="dark:bg-gray-700">
+            <SelectContent className="dark:bg-neutral-700">
               {isMainnet
                 ? mainnetAssets.map((asset, index) => (
                     <SelectItem key={index} value={asset.id}>
@@ -441,21 +441,21 @@ export function FormConnextXTransfer({ isMainnet, setIsMainnet }: FormConnextXTr
         <>
           {' '}
           <div className="mt-8 flex items-center justify-between">
-            <span className="text-sm text-gray-600 dark:text-slate-200">You receive</span>
-            <span className="text-sm text-gray-600 dark:text-slate-200">
+            <span className="text-sm text-neutral-600 dark:text-neutral-200">You receive</span>
+            <span className="text-sm text-neutral-600 dark:text-neutral-200">
               Balance:{' '}
               <span className="font-bold">
                 {formatNumber(destinationBalance?.formatted ?? '0')} {getAsset()?.symbol}
               </span>{' '}
             </span>
           </div>
-          <div className="mt-2 flex items-center justify-between rounded border border-slate-200 dark:border-gray-700">
+          <div className="mt-2 flex items-center justify-between rounded border border-neutral-200 dark:border-neutral-700">
             <div className="flex w-48 flex-col border-none">
               <Select disabled value={asset}>
-                <SelectTrigger className="input border-none text-gray-600 placeholder:text-neutral-400 dark:bg-gray-800 dark:text-slate-200 dark:placeholder:text-neutral-400">
+                <SelectTrigger className="input border-none text-neutral-600 placeholder:text-neutral-400 dark:bg-neutral-700 dark:text-neutral-200 dark:placeholder:text-neutral-400">
                   <SelectValue placeholder="Select chain" />
                 </SelectTrigger>
-                <SelectContent className="dark:bg-gray-700">
+                <SelectContent className="dark:bg-neutral-700">
                   {isMainnet
                     ? mainnetAssets.map((asset, index) => (
                         <SelectItem key={index} value={asset.id}>
@@ -487,9 +487,9 @@ export function FormConnextXTransfer({ isMainnet, setIsMainnet }: FormConnextXTr
               )}
             </div>
           </div>
-          <div className="mt-5 rounded border border-slate-200 py-2 dark:border-gray-700">
+          <div className="mt-5 rounded border border-neutral-200 py-2 dark:border-neutral-700">
             <div className="my-2 flex items-center justify-between">
-              <span className="ml-3 text-sm text-gray-600 dark:text-slate-200">Estimated time</span>
+              <span className="ml-3 text-sm text-neutral-600 dark:text-neutral-200">Estimated time</span>
               {isFastPath ? (
                 <span className="mr-2 text-green-500 dark:text-green-500">{'< 4 minutes'}</span>
               ) : (
@@ -499,7 +499,7 @@ export function FormConnextXTransfer({ isMainnet, setIsMainnet }: FormConnextXTr
           </div>{' '}
         </>
       ) : (
-        <div className="3xl:text-2xl mt-6 mb-2 text-center font-medium text-slate-400 dark:text-slate-200">Route not supported</div>
+        <div className="3xl:text-2xl mt-6 mb-2 text-center font-medium text-neutral-400 dark:text-neutral-200">Route not supported</div>
       )}
       <IsWalletConnected>{getButton()}</IsWalletConnected>
       <IsWalletDisconnected>

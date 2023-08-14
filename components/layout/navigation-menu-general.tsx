@@ -101,7 +101,7 @@ const ListItem = ({ className, href, name, imgLight, imgDark, children, ...props
         <LinkComponent
           href={href}
           className={cn(
-            'block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-slate-100 focus:bg-slate-100 dark:hover:bg-slate-700 dark:focus:bg-slate-700',
+            'block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-neutral-100 focus:bg-neutral-100 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700',
             className
           )}
           {...props}>
@@ -112,7 +112,7 @@ const ListItem = ({ className, href, name, imgLight, imgDark, children, ...props
             <Image alt="Etherscan logo" className="mb-3 h-7 w-7 rounded-full" height={100} src={imgLight} width={100} />
           </IsDarkTheme>
           <div className="text-sm font-medium leading-none">{name}</div>
-          <p className="text-sm leading-snug text-slate-500 line-clamp-2 dark:text-slate-400">{children}</p>
+          <p className="text-sm leading-snug text-neutral-500 line-clamp-2 dark:text-neutral-400">{children}</p>
         </LinkComponent>
       </NavigationMenuLink>
     </li>

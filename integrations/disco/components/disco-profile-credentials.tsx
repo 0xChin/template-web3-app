@@ -49,5 +49,5 @@ export const DiscoProfileCredentials = ({ className, address, ...props }: DiscoP
 }
 
 function CredentialCardSkeleton() {
-  return <div className="h-56 w-[600px] max-w-full animate-pulse rounded-lg bg-gray-500/80 dark:bg-gray-200"></div>
+  return <div className="h-56 w-[600px] max-w-full animate-pulse rounded-lg bg-neutral-500/80 dark:bg-neutral-200"></div>
 }

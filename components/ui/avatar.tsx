@@ -20,7 +20,7 @@ const AvatarFallback = forwardRef<ElementRef<typeof AvatarPrimivite.Fallback>, C
   ({ className, ...props }, ref) => (
     <AvatarPrimivite.Fallback
       ref={ref}
-      className={cn('flex h-full w-full items-center justify-center rounded-full bg-slate-100 dark:bg-slate-700', className)}
+      className={cn('flex h-full w-full items-center justify-center rounded-full bg-neutral-100 dark:bg-neutral-700', className)}
       {...props}
     />
   )

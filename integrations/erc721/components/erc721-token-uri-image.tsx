@@ -14,7 +14,7 @@ interface ERC721TokenUriImageProps extends ERC721Props {
 
 export function ERC721TokenUriImage({ address, chainId, className, tokenId, height, width, alt, ...props }: ERC721TokenUriImageProps) {
   const metadata = useERC721Metadata({ address, chainId, tokenId })
-  if (metadata.isLoading) return <div className={cn(className, 'animate-pulse bg-gray-200')} style={{ width, height }} {...props} />
+  if (metadata.isLoading) return <div className={cn(className, 'animate-pulse bg-neutral-200')} style={{ width, height }} {...props} />
 
   if (!metadata.data?.image) return null
 

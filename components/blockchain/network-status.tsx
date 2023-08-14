@@ -13,7 +13,7 @@ export function NetworkStatus({ className, ...props }: NetworkStatusProps) {
   const block = useBlockNumber({ watch: true })
   const network = useNetwork()
   const explorerUrl = network.chain?.blockExplorers?.default.url
-  const classes = cn(className, 'dark:bg-gray-800 bg-gray-100 z-10 flex shadow-md items-center rounded-full overflow-hidden')
+  const classes = cn(className, 'dark:bg-neutral-800 bg-neutral-100 z-10 flex shadow-md items-center rounded-full overflow-hidden')
   const classesBadge = cn(
     'uppercase text-xs font-bold tracking-wider leading-none rounded-full px-2',
     `bg-${GetNetworkColor(network.chain?.network)}-200`,
@@ -26,7 +26,7 @@ export function NetworkStatus({ className, ...props }: NetworkStatusProps) {
         <span className="px-1">{network.chain?.name ?? 'Ethereum'}</span>
       </span>
       {explorerUrl && (
-        <LinkComponent className="mx-3 text-2xs dark:hover:text-gray-200" href={explorerUrl}>
+        <LinkComponent className="mx-3 text-2xs dark:hover:text-neutral-200" href={explorerUrl}>
           <>#{block.data?.toString()}</>
         </LinkComponent>
       )}
